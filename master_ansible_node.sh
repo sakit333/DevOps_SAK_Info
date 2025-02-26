@@ -1,3 +1,7 @@
+echo "Installing ansible"
+sudo amazon-linux-extras install ansible2 -y
+echo "provide hosts information manually"
+echo "config /etc/ansible/ansible.cfg file"
 sudo sed -i 's/^#\(inventory\s*=\s*\/etc\/ansible\/hosts\)/\1/' /etc/ansible/ansible.cfg
 sudo sed -i 's/^#\(sudo_user\s*=\s*root\)/\1/' /etc/ansible/ansible.cfg
 echo "/etc/ansible/ansible/cfg done"
