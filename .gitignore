@@ -1,2 +1,8 @@
 provider.tf
 server_scale.md
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfvars
+.terraform.tfvars.json
