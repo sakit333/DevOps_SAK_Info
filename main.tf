@@ -1,12 +1,7 @@
- provider "aws" {
-  region     = "ap-south-1"
-  access_key = ""
-  secret_key = ""
-}
 resource "aws_instance" "prod_ec2" {
   ami           = "ami-03b8adbf322415fd0"
   instance_type = "t2.micro"
-  key_name      = "astroids_203"
+  key_name      = "Manu_sak_admin"
   count         = 1
   tags = {
     Name = "prod_app_server-${count.index}"
