@@ -3,16 +3,15 @@
 ## Step 1: Set Up the Master Node (Ansible Control Node)
 
 ### 1.1 Update and Install Ansible
-On the **master EC2 instance**, install Ansible:
+- On the **master EC2 instance**, install Ansible:
 
 ```sh
 sudo yum update -y
-sudo amazon-linux-extras enable ansible2
-sudo yum install -y ansible
+sudo amazon-linux-extras install ansible2 -y
 ```
 
 ### 1.2 Enable Root SSH Access
-Ensure root login via SSH is enabled:
+- Ensure root login via SSH is enabled:
 
 ```sh
 sudo sed -i 's/^#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
@@ -20,7 +19,7 @@ sudo systemctl restart sshd
 ```
 
 ### 1.3 Generate SSH Key for Root
-Generate SSH keys for the **root user**:
+- Generate SSH keys for the **root user**:
 
 ```sh
 sudo su -
