@@ -12,4 +12,7 @@ sudo sed -i '/^root\s\+ALL=(ALL)\s\+ALL/a ansible ALL=(ALL) NOPASSWD: ALL' /etc/
 sudo sed -i 's/^#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 sudo sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 service sshd restart
+echo "Generating SSH key for ansible user"
+sudo -u ansible ssh-keygen -t rsa -b 2048 -f /home/ansible/.ssh/id_rsa -q -N ""
+echo "SSH key pair generated"
 echo "master node configuration is done"
