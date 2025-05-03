@@ -1,4 +1,5 @@
 echo "Installing ansible"
+sudo yum update -y
 sudo amazon-linux-extras install ansible2 -y
 echo "provide hosts information manually"
 echo "config /etc/ansible/ansible.cfg file"
@@ -16,3 +17,6 @@ echo "Generating SSH key for ansible user"
 sudo -u ansible ssh-keygen -t rsa -b 2048 -f /home/ansible/.ssh/id_rsa -q -N ""
 echo "SSH key pair generated"
 echo "master node configuration is done"
+echo "Add manually /etc/ansible/hosts with worker nodes"
+echo "send id_rsa for worker nodes manually"
+echo "check connection with this command: ansible all -m ping"
