@@ -16,9 +16,9 @@
 sudo apt update
 ```
 
-### Step-2: install ansible (master node root)
+### Step-2: install ansible (master node > root)
 ```bash
-(sudo apt install software-properties-common
+sudo apt install software-properties-common
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible -y
 ansible --version
