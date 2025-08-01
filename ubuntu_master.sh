@@ -2,11 +2,21 @@
 
 # ======================================================
 # Ansible Master Node Setup Script
-# Script by @sak_shetty - Finalized
+# Script by @sak_shetty - Finalized with Logging
 # ======================================================
+
+LOG_FILE="/var/log/ansible_master_setup.log"
+exec > >(tee -a "$LOG_FILE") 2>&1
 
 set -e
 
+if ! [ -t 0 ]; then
+  echo "⚠️  This script must be run in an interactive terminal for inventory input."
+  echo "ℹ️  Example: bash <(curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/ubuntu_sak/ubuntu_master.sh)"
+  exit 1
+fi
+
+echo "=== Logging to: $LOG_FILE ==="
 echo "=== Step 1: Updating system ==="
 sudo apt update -y
 
@@ -60,17 +70,12 @@ else
     echo "SSH key already exists for ansible user. Skipping keygen."
 fi
 
-
 # Step 7: Interactive Ansible Inventory Setup
 echo "=== Step 7: Ansible Inventory Setup ==="
 sudo mkdir -p /etc/ansible
-if [ ! -f /etc/ansible/hosts ]; then
-    sudo touch /etc/ansible/hosts
-fi
-
-# Backup and clear hosts file
+sudo touch /etc/ansible/hosts
 sudo cp /etc/ansible/hosts /etc/ansible/hosts.bak
-echo "" | sudo tee /etc/ansible/hosts > /dev/null
+sudo truncate -s 0 /etc/ansible/hosts
 
 read -p "Enter number of groups: " GROUP_COUNT
 
@@ -96,6 +101,5 @@ echo -e "\n=== COPY THIS KEY TO WORKER NODES ===\n"
 sudo cat /home/ansible/.ssh/id_rsa.pub
 echo -e "\n=====================================\n"
 
-echo "=== Completed with Ansible Master node configuration ==="
-echo -e "====================================="
-echo "=== Script done by @sak_shetty ==="
+echo "=== Completed Ansible Master node setup ==="
+echo "=== Script by @sak_shetty ==="
