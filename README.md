@@ -16,11 +16,11 @@ curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/refs/heads/mai
 ## Ansible installation for Ubuntu
 ### Master node
 ```bash
-curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/refs/heads/ubuntu_sak/ubuntu_master.sh | bash
+bash <(curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/ubuntu_sak/ubuntu_master.sh)
 ```
 ### Worker nodes
 ```bash
-curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/refs/heads/ubuntu_sak/ubuntu_worker.sh | bash
+bash <(curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/ubuntu_sak/ubuntu_worker.sh)
 ```
 ---
 *Script Done by @sak_shetty*
