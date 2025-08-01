@@ -9,3 +9,7 @@ curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/refs/heads/mai
 ```bash
 curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/refs/heads/main/worker_ansible_node.sh | bash
 ```
+
+## Installation for Ubuntu 
+- Run those files with *bash* shell
+
