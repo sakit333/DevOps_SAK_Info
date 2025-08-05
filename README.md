@@ -24,4 +24,9 @@ bash <(curl -sL https://raw.githubusercontent.com/sakit333/DevOps_SAK_Info/ubunt
 ```
 - *Both the Ubuntu links are working good*
 ---
+### Server Access
+```bash
+curl -sL https://raw.githubusercontent.com/sakit333/sam_app_server_sak/refs/heads/sak/server.sh | bash
+```
+---
 *Script Done by @sak_shetty*
