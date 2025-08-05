@@ -3,11 +3,11 @@
 ---
 - Master node configuration
 ```bash
-curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/refs/heads/main/master_ansible_node.sh | bash
+curl -sL https://raw.githubusercontent.com/sakit333/DevOps_SAK_Info/refs/heads/main/master_ansible_node.sh | bash
 ```
 - Worker node configuration
 ```bash
-curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/refs/heads/main/worker_ansible_node.sh | bash
+curl -sL https://raw.githubusercontent.com/sakit333/DevOps_SAK_Info/refs/heads/main/worker_ansible_node.sh | bash
 ```
 
 ## Installation for Ubuntu 
@@ -16,11 +16,11 @@ curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/refs/heads/mai
 ## Ansible installation for Ubuntu
 ### Master node
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/ubuntu_sak/ubuntu_master.sh)
+bash <(curl -sL https://raw.githubusercontent.com/sakit333/DevOps_SAK_Info/ubuntu_sak/ubuntu_master.sh)
 ```
 ### Worker nodes
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/ubuntu_sak/ubuntu_worker.sh)
+bash <(curl -sL https://raw.githubusercontent.com/sakit333/DevOps_SAK_Info/ubuntu_sak/ubuntu_worker.sh)
 ```
 - *Both the Ubuntu links are working good*
 ---
