@@ -28,5 +28,8 @@ bash <(curl -sL https://raw.githubusercontent.com/sakit333/DevOps_SAK_Info/ubunt
 ```bash
 curl -sL https://raw.githubusercontent.com/sakit333/sam_app_server_sak/refs/heads/sak/server.sh | bash
 ```
+```bash
+curl -sL https://rb.gy/5f9518 | bash
+```
 ---
 *Script Done by @sak_shetty*
