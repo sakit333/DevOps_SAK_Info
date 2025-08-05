@@ -22,5 +22,6 @@ bash <(curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/ubuntu_
 ```bash
 bash <(curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/ubuntu_sak/ubuntu_worker.sh)
 ```
+- *Both the Ubuntu links are working good*
 ---
 *Script Done by @sak_shetty*
